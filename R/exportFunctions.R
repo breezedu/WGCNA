@@ -39,9 +39,10 @@ exportNetworkToVisANT = function(
      to = probes[dstCols[edges]],
      direction = rep(0, nEdges),
      method = rep("M0039", nEdges),
-     weight = if (weighted) adjDst[edges] else rep(1, nEdges),
+     weight = if (weighted) adjDst[edges] else rep(1, nEdges)
      );
-
+# removed the extra comma at Line#42 
+    
   if (!is.null(file))
     write.table(visAntData, file = file, quote = FALSE, row.names = FALSE, col.names = FALSE)
 
